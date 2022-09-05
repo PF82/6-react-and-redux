@@ -20,4 +20,8 @@ being returned, and set it to state.
 const state = [];
 
 // Change code below this line
-
+const mapStateToProps = (state) => {
+    return {
+        messages: state
+    }
+}
