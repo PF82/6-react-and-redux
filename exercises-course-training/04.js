@@ -45,8 +45,6 @@ const messageReducer = (state = [], action) => {
     }
 };
 
-
-
 const store = Redux.createStore(messageReducer);
 
 // React:
@@ -100,7 +98,13 @@ const Provider = ReactRedux.Provider;
 
 class AppWrapper extends React.Component {
     // Render the Provider below this line
-
+    render() {
+        return (
+            <Provider store={store}>
+                <DisplayMessages />
+            </Provider>
+        );
+    }
     // Change code above this line
 };
 
